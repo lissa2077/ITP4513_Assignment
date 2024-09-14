@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Main forget</title>
+<link href="Login.css" rel="stylesheet" type="text/css">
+
+<script>
+function sumbit(){
+	if(document.getElementById("email").value != ""){
+		alert("Sumbit Sucessfully.\nPlease check your email for reset password.");
+		window.location.href = "Login.php";
+	}else{
+		alert("please input email.");
+	}
+}
+</script>
+
+</head>
+
+<body>
+
+	<div class="main">
+		<div id="top"><div class="left">Spares Order System</div><div class="right" id="right">2019/09/06 15:07</div></div>
+
+		<div class="container">
+			<div class="rightBox">
+				<form action="javascript:sumbit()">
+					Your Email*<br>
+					<input type="email" id="email" name="email" placeholder="Email"><br><br>
+					<input type ="submit" value=" Submit"/>
+				</form>
+			</div>
+			<div class="leftBox">
+				Please complete this form and click Submit to reset your password. <br>
+				You will receive instructions by email to create a new password. <br><br>
+				Do not give your email account to others.
+
+			</div>
+		</div>
+
+		<div class="footer">Copyright © 2019 SOS Ltd. All Rights Reserved.</div>
+	</div>
+<script>
+var d = new Date();
+var date = d.getFullYear()+"/"+month(d)+"/"+two(d.getDate())+" "+two(d.getHours())+":"+two(d.getMinutes());
+document.getElementById("right").innerHTML = date;
+
+function month(d)
+{ 
+  return (d.getMonth() < 10 ? '0' : '') + (d.getMonth() + 1);
+}
+
+function two(d)
+{ 
+  return (d < 10 ? '0' : '') + d ;
+}
+</script>
+</body>
+</html>
